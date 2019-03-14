@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(222, 225, 228);
+    font-family: 'Courier New', Courier, monospace;
+}
+#back-paper{
+    background-color: yellow;
+    border: 5px solid green;
+    border-radius: 15px;
+    padding: 20px;
+    align-content: center;
+    box-shadow: 0px 10px 15px rgb(146, 137, 137);
+    position: absolute;
+    margin: auto;
+}
+#he{
+   
+    margin: auto;
+    margin-bottom: 10px;
+}
+#xno{
+    border-radius: 3px;
+    background-color: aliceblue;
+    border: 1px solid red;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#yno{
+    border-radius: 3px;
+    background-color: aliceblue;
+    border: 1px solid red;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.btn{
+    border-radius: 8px;
+    border: 1px solid red;
+    font-family: 'Courier New', Courier, monospace;
+}
+

@@ -4,15 +4,35 @@
         <!-- Load TFJS -->
         <!-- loaded from https://github.com/tensorflow/tfjs -->        
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
-        <title>Hello World!</title>
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <title>Hello TFJS</title>
     </head>
     <body>
-        <p>Inputs</p>
+        <div id='back-paper'>
+        <script src="scripts/helpers.js"></script>
+        <script src="scripts/demo.js"></script>
+        <h3 id="he">Enter Relation: </h3>
 
+        <form id="input-form">
+            X:<input type="text" id="xno" placeholder="Only float with dot !"   
+            onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  
+            event.charCode == 46 || event.charCode == 0 "><br>
+             Y:<input type="text" id="yno" placeholder="Only float with dot !"   
+             onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  
+             event.charCode == 46 || event.charCode == 0 "><br>
+             <input type='button' class="btn" onclick="insert()" value="Add Data">
+             <input type="button" class="btn" value="Reset all" onclick="resetAll()">
+             <input type='button' class="btn" onclick="" value="Demo(R)">
+             <input type='button' class="btn" onclick="run()" value="Fit">
+             <input type='button' class="btn" onclick="resetLearning()" value="Reset(keep Data)">
+        </form>
+
+        
         <p id="X">X: </p>
         <p id="Y">Y: </p>
 
-        <p id="isLoaded">Hii.</p>
-        <script src="scripts/demo.js"></script>
+        <p id='isLoaded'>loaded</p>
+
+    </div>
     </body>
 </html>

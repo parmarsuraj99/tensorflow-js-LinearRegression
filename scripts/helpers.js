@@ -9,6 +9,7 @@ function resetAll(){
     document.getElementById('isLoaded').innerText='';
     xArr=[];
     yArr=[];
+    document.getElementById('predict_form').style.visibility='collapse';
 }
 function insert(){
     if(document.getElementById("xno").value !== '' && document.getElementById('yno').value!=''){

@@ -11,6 +11,7 @@ model.compile({loss: 'meanSquaredError', optimizer: 'sgd', metrics: ['mse']});
 
 const xs = tf.tensor(xArr);
 const ys = tf.tensor(yArr);
+var epochsnum=100;
 
 async function run(){
 
@@ -21,6 +22,10 @@ async function run(){
     // Generate some synthetic data for training.
     const xs = tf.tensor(xArr);
     const ys = tf.tensor(yArr);
+    epochsnum=document.getElementById('epochsNum').value;
+    if(epochsnum==0){
+        document.getElementById('epochsNum').value=100;
+    }
 
     document.getElementById("X").innerHTML="X: "+xs;
     //const ys = tf.mul(xs, 2); 
@@ -29,7 +34,7 @@ async function run(){
     document.getElementById('isLoaded').innerHTML="Data loaded...";
     // Train the model using the data.
     document.getElementById('isLoaded').innerHTML="Training...";
-    await model.fit(xs, ys, {epochs: 200});
+    await model.fit(xs, ys, {epochs: epochsnum});
     console.log("fitting..")
     document.getElementById('isLoaded').innerHTML="Training Complete!";
     

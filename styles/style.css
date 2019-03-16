@@ -8,9 +8,8 @@ body{
     border-radius: 25px;
     padding: 20px;
     align-content: center;
-    box-shadow: 3px 2px 20px rgb(201, 180, 123);
-    position: relative;
-    margin:auto;
+    box-shadow: 3px 2px 20px #c9b47b;
+    position: static;
 }
 #he{
    

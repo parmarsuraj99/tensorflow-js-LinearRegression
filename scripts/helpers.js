@@ -4,6 +4,7 @@ var yArr = new Array();
 function resetAll(){
     document.getElementById('X').innerHTML='';
     document.getElementById('Y').innerHTML='';
+    document.getElementById('epochsNum').value='100';
     document.getElementById('xno').value='';
     document.getElementById('yno').value='';
     document.getElementById('isLoaded').innerText='';

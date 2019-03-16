@@ -10,6 +10,15 @@ function resetAll(){
     xArr=[];
     yArr=[];
     document.getElementById('predict_form').style.visibility='collapse';
+    resetModel();
+}
+
+function resetModel(){
+    const model = tf.sequential();    
+    //const model1 = await tf.models.modelFromJSON('models/model.json');
+    model.add(tf.layers.dense({units: 1, inputShape: [1]}));
+    // Prepare the model for training: Specify the loss and the optimizer.
+    model.compile({loss: 'meanSquaredError', optimizer: 'sgd', metrics: ['mse']});
 }
 function insert(){
     if(document.getElementById("xno").value !== '' && document.getElementById('yno').value!=''){

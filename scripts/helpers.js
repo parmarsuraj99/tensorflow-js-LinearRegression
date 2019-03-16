@@ -10,7 +10,7 @@ function resetAll(){
     xArr=[];
     yArr=[];
     document.getElementById('predict_form').style.visibility='collapse';
-    resetModel();
+   // resetModel();
 }
 
 function resetModel(){
@@ -28,6 +28,7 @@ function insert(){
     yArr.push(Number(yval));
     document.getElementById('X').innerHTML='X: '+xArr;
     document.getElementById('Y').innerHTML='Y: '+yArr;
+    document.getElementById('isLoaded').innerHTML="loaded";
     }
 }
 

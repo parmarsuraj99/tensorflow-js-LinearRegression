@@ -9,7 +9,8 @@ body{
     padding: 20px;
     align-content: center;
     box-shadow: 3px 2px 20px rgb(201, 180, 123);
-    position: absolute;
+    position: relative;
+    margin:auto;
 }
 #he{
    

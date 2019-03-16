@@ -41,16 +41,23 @@ function myFunction() {
     xA.push(Number(xval));
     document.getElementById("isLoaded").innerText="Prediction("+xval+"):"+model.predict(tf.tensor((xA)));
 }
-function random(){
-    xArr=tf.range(0, 9, 2, 'float32');
+async function random(){
+
+    resetAll();
+    xArr=tf.range(0, 9, 2, 'float32').as1D();
     tf.print(xArr.shape);
     //We just created some small random numbers and added them to yArr so
     //the data is a bit varied
     // Y=2*X-1
-    yArr = tf.add(tf.mul(xArr, 2), -1);
-    yArr=tf.add(yArr, tf.sum(tf.randomNormal([5, 1]).mul(0.1),1));
+    yArr = tf.add(tf.mul(xArr, 2), -1).as1D();
+    yArr=tf.add(yArr, tf.sum(tf.randomNormal([5, 1]).mul(0.1),1), 'float32').as1D();
 
     tf.print("X"+xArr);
     tf.print("Y"+yArr);
-    
+
+    document.getElementById("X").innerHTML="X: "+xArr;
+    //const ys = tf.mul(xs, 2); 
+    document.getElementById("Y").innerHTML="Y: "+yArr;
+    await model.fit(xArr, yArr, {epochs:100});
+    document.getElementById('predict_form').style.visibility='visible';
 }

@@ -9,7 +9,8 @@ body{
     padding: 20px;
     align-content: center;
     box-shadow: 3px 2px 20px #c9b47b;
-    position: static;
+
+
 }
 #he{
    
@@ -30,6 +31,10 @@ body{
     border-radius: 8px;
     border: 1px solid red;
     font-family: 'Courier New', Courier, monospace;
+}
+#btnReset{
+    background-color: red;
+    color:white;
 }
 #predict-form{
     display: none;

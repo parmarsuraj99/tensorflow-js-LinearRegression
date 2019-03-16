@@ -47,7 +47,7 @@ function myFunction() {
     var xA = new Array();
     xval=document.getElementById('predno').value;
     xA.push(Number(xval));
-    document.getElementById("isLoaded").innerText="Prediction("+xval+"):"+model.predict(tf.tensor((xA)));
+    document.getElementById("isLoaded").innerText="Prediction("+xval+"):"+model.predict(tf.tensor((xA))).dataSync();
 }
 async function random(){
 

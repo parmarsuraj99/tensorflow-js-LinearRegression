@@ -9,54 +9,59 @@
     </head>
     <body>
         <div id='head'>
-            <h2 id='heading'>TensorFlow.js Linear Regression<br>(1Layer ANN)</h2>
+            <h2 id='heading'>TensorFlow.js Linear Regression(1Layer ANN)</h2>
         </div>
 
         <div id='back-paper'>
-        <script src="scripts/helpers.js"></script>
-        <script src="scripts/demo.js"></script>
         
-        <h3 id="he">Enter Data: </h3>
+            <h3 id="he">Enter Data: </h3>
 
-        <form id="input-form">
-            X:<input type="text" class='numIn' id="xno" placeholder="Only float with dot !"   
-            onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  
-            event.charCode == 46 || event.charCode == 0 "><br>
-             Y:<input type="text" class='numIn' id="yno" placeholder="Only float with dot !"   
-             onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  
-             event.charCode == 46 || event.charCode == 0 "><br>
-             <br>
-             <input type='button' class="btn" onclick="insert()" value="Add Data"><br>
-             <input type='button' class="btn" onclick="run()" value="Train">
-             E:<input type="text" class='numIn' id="epochsNum" placeholder="Only Integer"   
-             onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  
-             event.charCode == 46 || event.charCode == 0 ">(Epochs)
-             <br>
-             <input type="button" class="btn" id='btnReset' value="Reset all" onclick="resetAll()"><br><br>
-             <input type='button' class="btn" onclick="random()" value="Demo(y~=2*x-1)">(random data)
-             <!--
-             <input type='button' class="btn" onclick="resetModel()" value="Reset(keep Data)">
-             -->
-        </form>
+            <form id="input-form">
+                X:<input type="text" class='numIn' id="xno" placeholder="Only float with dot !"   
+                onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  
+                event.charCode == 46 || event.charCode == 0" />
+                </br>
+                Y:<input type="text" class='numIn' id="yno" placeholder="Only float with dot !"
+                onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||
+                event.charCode == 46 || event.charCode == 0" />
+                </br>
+                E:<input type="text" class='numIn' id="epochsNum" placeholder="Only Integer"   
+                onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  
+                event.charCode == 46 || event.charCode == 0" />(Epochs)
+                </br></br>
+                <input type='button' class="btn" onclick="insert()" value="Add Data" />&nbsp;&nbsp;
+                <input type='button' class="btn" onclick="run()" value="Train" />&nbsp;&nbsp;
+                <input type="button" class="btn" id='btnReset' value="Reset all" onclick="resetAll()" />
+                <br><br>
+                <input type='button' class="btn" onclick="random()" value="Demo(y~=2*x-1)"/>(random data)
+            </form>
+        </div>
 
-        
-        <p id="X">X: </p>
-        <p id="Y">Y: </p>
+        </br></br>
 
-        <form id='predict_form' style="visibility:hidden;">
-        <input type="text" class='numIn' id="predno" placeholder="Only float with dot !"   
-            onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  
-            event.charCode == 46 || event.charCode == 0 " ><br>
+        <div id='back-paper'>
 
-            <input type="button" id='btnPred' class=btn value="Predict" onclick="myFunction()">
-        </form>
+            <h3 id="he">Processing: </h3>
+
+            <p id="X">X: </p>
+            <p id="Y">Y: </p>
+
+            <form id='predict_form' style="visibility:hidden;">
+            <input type="text" class='numIn' id="predno" placeholder="Only float with dot !"   
+                onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  
+                event.charCode == 46 || event.charCode == 0 " ><br>
+
+                <input type="button" id='btnPred' class=btn value="Predict" onclick="myFunction()">
+            </form>
 
 
-        <p id='isLoaded'>loaded</p>
+            <p id='isLoaded'>loaded</p>
+        </div>
 
-    </div>
-    <h6>Epochs: How many times the entire data is Forward+Backpropagated! You can keep it default</h6>
-    <h6 style="position: relative;">I may not have followed the best practices for JS.</h6>
-    <h6>Contact: parmarsuraj99@gmail.com</h6>
+        <h6>Epochs: How many times the entire data is Forward+Backpropagated! You can keep it default</h6>
+        <h6 style="position: relative;">I may not have followed the best practices for JS.</h6>
+        <h6>Contact: parmarsuraj99@gmail.com</h6>
     </body>
+	<script src="scripts/helpers.js"></script>
+    <script src="scripts/demo.js"></script>
 </html>

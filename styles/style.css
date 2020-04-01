@@ -3,7 +3,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
 }
 #back-paper{
-    background-color: yellow;
+    background-color: rgb(228, 231, 231);
     border: 0px solid green;
     border-radius: 25px;
     padding: 20px;
